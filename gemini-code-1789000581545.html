@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangkuman PAI Kelas XI - Bab 2</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --bg: #f4f6f7;
+            --card-bg: #ffffff;
+            --text: #333333;
+            --level1: #e74c3c;
+            --level2: #f39c12;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 25px 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+
+        header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .btn-filter {
+            padding: 8px 16px;
+            border: none;
+            background: #e0e0e0;
+            color: #333;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-filter.active, .btn-filter:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+        }
+
+        .card.level-1::before {
+            background-color: var(--level1);
+        }
+
+        .card.level-2::before {
+            background-color: var(--level2);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .card-title {
+            margin: 0;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .badge.level-1 {
+            background-color: var(--level1);
+        }
+
+        .badge.level-2 {
+            background-color: var(--level2);
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .sub-item {
+            background: #f8f9fa;
+            border-left: 3px solid var(--secondary);
+            padding: 8px 12px;
+            margin: 8px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .sub-item strong {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Bukti Beriman</h1>
+        <p>Pendidikan Agama Islam dan Budi Pekerti — Kelas XI (Bab 2)</p>
+    </header>
+
+    <div class="filter-container">
+        <button class="btn-filter active" onclick="filterLevel('all')">Semua</button>
+        <button class="btn-filter" onclick="filterLevel('1')">LEVEL 1 (Tinggi)</button>
+        <button class="btn-filter" onclick="filterLevel('2')">LEVEL 2 (Sedang)</button>
+    </div>
+
+    <!-- Pokok Ajaran -->
+    <div class="card level-1" data-level="1">
+        <div class="card-header">
+            <h2 class="card-title">1. Pokok Ajaran Islam & Cabang Iman</h2>
+            <span class="badge level-1">LEVEL 1</span>
+        </div>
+        <p>Dinul Islam terdiri dari tiga pokok ajaran utama yang tidak terpisahkan[cite: 1]:</p>
+        <ul>
+            <li><strong>Akidah (Iman):</strong> Pokok keimanan (6 Rukun Iman)[cite: 1].</li>
+            <li><strong>Syariah (Islam):</strong> Hukum dan peribadatan (5 Rukun Islam)[cite: 1].</li>
+            <li><strong>Akhlak (Ihsan):</strong> Etika dan moralitas hidup berdasarkan wahyu[cite: 1].</li>
+        </ul>
+        <p><em>Iman memiliki 63 cabang (Syu'abul Iman), empat di antaranya menjadi bukti nyata keimanan seseorang[cite: 1].</em></p>
+    </div>
+
+    <!-- Memenuhi Janji -->
+    <div class="card level-1" data-level="1">
+        <div class="card-header">
+            <h2 class="card-title">2. Memenuhi Janji ('Aqad)</h2>
+            <span class="badge level-1">LEVEL 1</span>
+        </div>
+        <p>Perjanjian atau ikatan kuat yang wajib dipenuhi dan akan diminta pertanggungjawabannya (Q.S. al-Isra'/17: 34)[cite: 1].</p>
+        
+        <strong>Pembagian Janji:</strong>
+        <div class="sub-item">
+            <strong>Janji kepada Allah Swt.:</strong> Terjadi di alam ruh/rahim untuk mengesakan Allah dan taat kepada-Nya (Q.S. al-A'raf/7: 172)[cite: 1].
+        </div>
+        <div class="sub-item">
+            <strong>Janji kepada sesama manusia:</strong> Perjanjian muamalah, perniagaan, atau pernikahan yang sesuai syariat[cite: 1].
+        </div>
+
+        <strong style="display:block; margin-top:10px;">Manfaat Memenuhi Janji:</strong>
+        <ul>
+            <li>Mendapatkan predikat <em>muttaqin</em> (Q.S. Ali 'Imran/3: 76)[cite: 1].</li>
+            <li>Mendatangkan keberhasilan, ketenteraman, dan rasa percaya dari sesama[cite: 1].</li>
+            <li>Menghapus kesalahan dan jalan menuju surga (Q.S. al-Baqarah/2: 40)[cite: 1].</li>
+        </ul>
+    </div>
+
+    <!-- Mensyukuri Nikmat -->
+    <div class="card level-2" data-level="2">
+        <div class="card-header">
+            <h2 class="card-title">3. Mensyukuri Nikmat</h2>
+            <span class="badge level-2">LEVEL 2</span>
+        </div>
+        <p>Berterima kasih dan mengakui rahmat Allah Swt. dengan kerendahan hati serta menggunakannya sesuai rida-Nya[cite: 1]. Lawan kata dari syukur adalah <em>kufur</em>[cite: 1].</p>
+        
+        <p><strong>Kesatuan Perwujudan Syukur:</strong> Syukur yang benar wajib menyatukan antara <strong>Hati</strong> (pengakuan/kerelaan), <strong>Lisan</strong> (pujian/hamdalah), dan <strong>Anggota Tubuh</strong> (ketaatan)[cite: 1].</p>
+
+        <strong>Keuntungan Orang Bersyukur:</strong>
+        <ul>
+            <li>Menjadi pribadi yang lebih produktif, bahagia, dan optimis[cite: 1].</li>
+            <li>Manfaatnya kembali kepada diri sendiri (Q.S. Ibrahim/14: 7, Q.S. Luqman/31: 12)[cite: 1].</li>
+        </ul>
+    </div>
+
+    <!-- Memelihara Lisan -->
+    <div class="card level-1" data-level="1">
+        <div class="card-header">
+            <h2 class="card-title">4. Memelihara Lisan</h2>
+            <span class="badge level-1">LEVEL 1</span>
+        </div>
+        <p>Keselamatan manusia tergantung pada kemampuannya menjaga lisan (HR. Bukhari)[cite: 1]. Pada hari kiamat, lisan dan anggota tubuh akan menjadi saksi (Q.S. an-Nur/24: 24)[cite: 1].</p>
+
+        <strong>Bahaya Lisan yang Tidak Terjaga:</strong>
+        <div class="sub-item">
+            <strong>Fitnah:</strong> Menyebarkan komunikasi berdasarkan fakta palsu untuk merusak reputasi seseorang[cite: 1].
+        </div>
+        <div class="sub-item">
+            <strong>Ghibah:</strong> Membicarakan keburukan orang lain yang benar adanya saat ia tidak hadir (Q.S. al-Hujurat/49: 12)[cite: 1].
+        </div>
+        <div class="sub-item">
+            <strong>Buhtan:</strong> Kebohongan besar / membicarakan keburukan yang sebenarnya tidak ada pada diri orang tersebut[cite: 1].
+        </div>
+    </div>
+
+    <!-- Menutupi Aib -->
+    <div class="card level-2" data-level="2">
+        <div class="card-header">
+            <h2 class="card-title">5. Menutupi Aib Orang Lain</h2>
+            <span class="badge level-2">LEVEL 2</span>
+        </div>
+        <p>Aib adalah cela atau keburukan rahasia[cite: 1]. Siapa yang menutupi aib saudaranya di dunia, Allah akan menutupi aibnya di dunia dan akhirat (HR. Muslim)[cite: 1].</p>
+
+        <strong>Macam-Macam Aib:</strong>
+        <ul>
+            <li><strong>Aib Dzahir:</strong> Keburukan/cacat yang nampak secara fisik/lahiriah[cite: 1].</li>
+            <li><strong>Aib Tersembunyi:</strong> Keburukan rahasia yang tidak kelihatan jika tidak dibuka[cite: 1].</li>
+        </ul>
+
+        <p><strong>Etika Media Sosial:</strong> Dilarang berprasangka buruk (<em>su'udzon</em>), mencari-cari kesalahan (<em>tajassus</em>), dan mengunggah/menyebarkan aib orang lain di medsos[cite: 1].</p>
+    </div>
+</div>
+
+<script>
+    function filterLevel(level) {
+        const cards = document.querySelectorAll('.card');
+        const buttons = document.querySelectorAll('.btn-filter');
+
+        // Update tombol aktif
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        // Filter kartu
+        cards.forEach(card => {
+            if (level === 'all') {
+                card.style.display = 'block';
+            } else {
+                if (card.getAttribute('data-level') === level) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
